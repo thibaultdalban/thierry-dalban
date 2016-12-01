@@ -1,0 +1,76 @@
+---
+title: Thierry Dalban photographe
+---
+%section.home
+  = image_tag "homepage.jpg", class: "tilt", data:{ "tilt-options": '{ "extraImgs": 1 }' }
+%section.pictures
+  .grid
+    .grid-sizer
+      .grid-item
+        .picture
+          = image_tag "image_1.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_2.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_7.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_4.jpg"
+      .grid-item.grid-item--width-2
+        .picture
+          = image_tag "image_3.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_6.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_11.jpg"
+      .grid-item.grid-item--width-2
+        .picture
+          = image_tag "image_8.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_5.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_9.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_10.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_12.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_13.jpg"
+      .grid-item
+        .picture
+          = image_tag "image_14.jpg"
+
+
+- content_for :javascripts do
+  :coffeescript
+    $ ->
+      tilt = document.querySelector(".tilt")
+      new TiltFx tilt,
+        extraImgs: 1
+        opacity : 1
+        bgfixed : true
+        movement :
+          perspective : 1000
+          translateX : -100
+          translateY : -10
+          translateZ : 20
+          rotateX : 2
+          rotateY : 2
+          rotateZ : 0
+
+      grid = $(".grid").masonry(
+        itemSelector:     ".grid-item",
+        columnWidth:      ".grid-sizer",
+        percentPosition:  true
+      )
+      grid.imagesLoaded().progress ->
+        grid.masonry("layout")
