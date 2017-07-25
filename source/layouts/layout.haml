@@ -1,19 +1,23 @@
 !!! 5
-%head
-  %title
-    = current_page.data.title || "Thierry Dalban photographe"
-  %meta{:"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
-  %meta{charset: "utf-8"}
-  %meta{name: "viewport", content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"}
-  = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-  = stylesheet_link_tag :main
+%html.no-js
+  %head
+    %title
+      = current_page.data.title || "Thierry Dalban photographe"
+    %meta{:"http-equiv" => "X-UA-Compatible", content: "IE=edge"}
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"}
+    = stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css"
+    = stylesheet_link_tag :main
+    = javascript_include_tag "vendor/modernizr-custom.js"
 
-%body{class: page_classes}
-  %header
-    = partial "layouts/nav"
-  = yield
-  = javascript_include_tag "https://code.jquery.com/jquery-3.1.1.min.js"
-  = javascript_include_tag "https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"
-  = javascript_include_tag "https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"
-  = javascript_include_tag :all
-  = yield_content :javascripts
+  %body{class: page_classes}
+    %header
+      = partial "layouts/nav"
+    = yield
+    = javascript_include_tag "https://code.jquery.com/jquery-3.1.1.min.js"
+    = javascript_include_tag "https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"
+    = javascript_include_tag "https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/animejs/1.1.2/anime.min.js"
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"
+    = javascript_include_tag :all
+    = yield_content :javascripts

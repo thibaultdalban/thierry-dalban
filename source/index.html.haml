@@ -1,76 +1,226 @@
 ---
 title: Thierry Dalban photographe
 ---
-%section.home
-  = image_tag "homepage.jpg", class: "tilt", data:{ "tilt-options": '{ "extraImgs": 1 }' }
+%section.home.tilter
+  %figure.tilter__figure
 %section.pictures
   .grid
-    .grid-sizer
-      .grid-item
-        .picture
-          = image_tag "image_1.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_2.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_7.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_4.jpg"
-      .grid-item.grid-item--width-2
-        .picture
-          = image_tag "image_3.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_6.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_11.jpg"
-      .grid-item.grid-item--width-2
-        .picture
-          = image_tag "image_8.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_5.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_9.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_10.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_12.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_13.jpg"
-      .grid-item
-        .picture
-          = image_tag "image_14.jpg"
+    .grid__sizer
+    .grid__item{data: { size: "400x546" }}
+      %a.img-wrap{href: "/images/image_1.jpg"}
+        = image_tag "thumbnails/image_1.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "800x1202" }}
+      %a.img-wrap{href: "/images/image_2.jpg"}
+        = image_tag "thumbnails/image_2.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "672x1008" }}
+      %a.img-wrap{href: "/images/image_7.jpg"}
+        = image_tag "thumbnails/image_7.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "500x683" }}
+      %a.img-wrap{href: "/images/image_4.jpg"}
+        = image_tag "thumbnails/image_4.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "792x1024" }}
+      %a.img-wrap{href: "/images/image_3.jpg"}
+        = image_tag "thumbnails/image_3.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "981x994" }}
+      %a.img-wrap{href: "/images/image_6.jpg"}
+        = image_tag "thumbnails/image_6.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "500x749" }}
+      %a.img-wrap{href: "/images/image_11.jpg"}
+        = image_tag "thumbnails/image_11.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "2610x1986" }}
+      %a.img-wrap{href: "/images/image_8.jpg"}
+        = image_tag "thumbnails/image_8.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "900x622" }}
+      %a.img-wrap{href: "/images/image_5.jpg"}
+        = image_tag "thumbnails/image_5.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "1066x1600" }}
+      %a.img-wrap{href: "/images/image_9.jpg"}
+        = image_tag "thumbnails/image_9.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "339x508" }}
+      %a.img-wrap{href: "/images/image_10.jpg"}
+        = image_tag "thumbnails/image_10.jpg"
+    .grid__item{data: { size: "2060x1939" }}
+      %a.img-wrap{href: "/images/image_12.jpg"}
+        = image_tag "thumbnails/image_12.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "2251x1930" }}
+      %a.img-wrap{href: "/images/image_13.jpg"}
+        = image_tag "thumbnails/image_13.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+    .grid__item{data: { size: "2100x2342" }}
+      %a.img-wrap{href: "/images/image_14.jpg"}
+        = image_tag "thumbnails/image_14.jpg"
+        .caption
+          %h2
+            titre de la
+            %span
+              série
+          %p
+            Une description de la série en quelques mots / quelques ligne.
+  .preview
+    .swiper-container.original
+      .swiper-wrapper
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+    %button.action.action--close
+      %i.fa.fa-times
+      %span.text-hidden
+        Close
+    .description.description--preview
 
 
 - content_for :javascripts do
   :coffeescript
     $ ->
-      tilt = document.querySelector(".tilt")
+      tilt = document.querySelector('.tilter')
       new TiltFx tilt,
-        extraImgs: 1
-        opacity : 1
-        bgfixed : true
-        movement :
-          perspective : 1000
-          translateX : -100
-          translateY : -10
-          translateZ : 20
-          rotateX : 2
-          rotateY : 2
-          rotateZ : 0
+        movement:
+          imgWrapper:
+            translation:
+              x: 10
+              y: 10
+              z: 30
+            rotation:
+              x: 0
+              y: 10
+              z: 0
+            reverseAnimation:
+              duration: 600
+              easing: 'easeOutQuad'
 
-      grid = $(".grid").masonry(
-        itemSelector:     ".grid-item",
-        columnWidth:      ".grid-sizer",
-        percentPosition:  true
-      )
-      grid.imagesLoaded().progress ->
-        grid.masonry("layout")
+      support = transitions: Modernizr.csstransitions
+      transEndEventNames =
+        'WebkitTransition': 'webkitTransitionEnd'
+        'MozTransition': 'transitionend'
+        'OTransition': 'oTransitionEnd'
+        'msTransition': 'MSTransitionEnd'
+        'transition': 'transitionend'
+      transEndEventName = transEndEventNames[Modernizr.prefixed('transition')]
+
+      onEndTransition = (el, callback) ->
+        onEndCallbackFn = (ev) ->
+          if support.transitions
+            if ev.target != this
+              return
+            @removeEventListener transEndEventName, onEndCallbackFn
+          if callback and typeof callback == 'function'
+            callback.call this
+
+        if support.transitions
+          el.addEventListener transEndEventName, onEndCallbackFn
+        else
+          onEndCallbackFn()
+
+      new GridFx document.querySelector('.grid'),
+        imgPosition:
+          x: 1
+          y: -0.75
+        pagemargin: 50
+        onOpenItem: (instance, item) ->
+          win =
+            width: window.innerWidth
+            height: window.innerHeight
+          instance.items.forEach (el) ->
+            if item != el
+              delay = Math.floor(Math.random() * 150)
+              el.style.WebkitTransition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)'
+              el.style.transition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)'
+              el.style.WebkitTransform = 'translate3d(-' + win.width + 'px,0,0)'
+              el.style.transform = 'translate3d(-' + win.width + 'px,0,0)'
+              el.style.opacity = 0
+        onCloseItem: (instance, item) ->
+          instance.items.forEach (el) ->
+            if item != el
+              delay = Math.floor(Math.random() * 150)
+              el.style.WebkitTransition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)'
+              el.style.transition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)'
+              el.style.WebkitTransform = 'translate3d(0,0,0)'
+              el.style.transform = 'translate3d(0,0,0)'
+              el.style.opacity = 1
+              onEndTransition el, ->
+                el.style.transition = 'none'
+                el.style.WebkitTransform = 'none'
+
